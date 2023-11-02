@@ -1,0 +1,4 @@
+interface ImpactoEcologico {
+    double obtenerImpactoEcologico();
+}
+
