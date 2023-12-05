@@ -9,4 +9,4 @@ class Goodies {
  return price;
  }
  public String getName(){
- return nam
+ return name:}}
