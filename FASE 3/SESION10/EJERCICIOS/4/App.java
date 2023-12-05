@@ -11,11 +11,14 @@ public class App {
         Producto[] arrProductos = { p1, p2 };
         Persona[] arrPersonas = { pe1, pe2, e1, e2 };
 
-        System.out.println(buscarEnArrayNumerico(arrProductos, 1441));
+        System.out.println(buscarEnArray(arrProductos, 1441));
+        System.out.println(buscarEnArray(arrPersonas, "987654321"));
+        System.out.println(buscarEnArray(arrPersonas, "Medicina"));
+        System.out.println(buscarEnArray(arrPersonas, "Psicologia"));
 
     }
 
-    public static <T extends Number, E extends Identificable<T>> Integer buscarEnArrayNumerico(E[] arr, T id) {
+    public static <T, E extends Identificable<T>> Integer buscarEnArray(E[] arr, T id) {
         for (int i = 0; i < arr.length; i++) {
             T objetoId = arr[i].getId();
             if (objetoId.equals(id)) {
